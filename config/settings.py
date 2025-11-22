@@ -123,11 +123,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"  # where collectstatic will put files
 
-# Optional but nice for production:
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# Where collected static files will be stored on Render
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# If you ever add custom static files in a 'static' folder:
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+# Let WhiteNoise serve compressed, hashed files in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
