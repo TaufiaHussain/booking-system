@@ -3,3 +3,4 @@ reportlab>=4.0
 pytz
 gunicorn
 python-dotenv
+xhtml2pdf
