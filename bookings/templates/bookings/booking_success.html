@@ -1,0 +1,18 @@
+{% extends "bookings/base.html" %}
+
+{% block content %}
+  <div class="text-center space-y-4">
+    <p class="text-lg font-medium text-emerald-700">
+      Thank you! Your booking has been submitted.
+    </p>
+    <p class="text-sm text-slate-600">
+      You will receive an email with more details once your appointment is confirmed.
+    </p>
+    <a href="{% url 'booking_create' %}"
+       class="inline-flex items-center justify-center px-4 py-2 mt-4
+              bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium
+              rounded-md shadow-sm transition">
+      Make another booking
+    </a>
+  </div>
+{% endblock %}

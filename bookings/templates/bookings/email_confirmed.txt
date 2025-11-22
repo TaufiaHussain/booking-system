@@ -1,0 +1,14 @@
+Dear {{ booking.name }},
+
+Your appointment has been confirmed!
+
+Here are your details:
+
+- Date: {{ booking.date }}
+- Time: {{ booking.time }}
+- Phone: {{ booking.phone }}
+
+A PDF copy of your appointment details is attached.
+
+Thank you,
+[Dental Clinic]
